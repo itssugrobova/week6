@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        border: 1px solid black;
+        text-align: center;
+      }
+      .header {
+        grid-area: header;
+      }
+      .main {
+        grid-area: main;
+      }
+      .article1 {
+        grid-area: article1;
+      }
+      .article2 {
+        grid-area: article2;
+      }
+      .article3 {
+        grid-area: article3;
+      }
+      .aside {
+        grid-area: aside;
+      }
+      .footer {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-content: space-between;
+        grid-area: footer;
+      }
+      .container {
+        height: 90vh;
+        width: 90vw;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr 1.5fr 1fr 1fr 1.5fr;
+        grid-template-areas:
+          "header header header"
+          "main main aside"
+          "article1 article2 aside"
+          "article3 article3 aside"
+          "footer footer footer";
+        justify-items: space-around;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">[Шапка страницы]</header>
+      <main class="main">[Основная часть]</main>
+      <article class="article1">[Еще 1]</article>
+      <article class="article2">[Еще 2]</article>
+      <article class="article3">[Еще 3]</article>
+      <aside class="aside">[Боковая область]</aside>
+      <footer class="footer">
+        <div>[Секция футера 1]</div>
+        <div>[Секция футера 2]</div>
+        <div>[Секция футера 3]</div>
+        <div>[Секция футера 4]</div>
+      </footer>
+    </div>
+  </body>
+</html>
