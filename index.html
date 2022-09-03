@@ -4,7 +4,104 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Гриды</title>
+    <style>
+      .header,
+      .sidebar,
+      .main,
+      .footer {
+        border: 1px solid black;
+      }
+      .header2,
+      .sidebar2,
+      .main2,
+      .footer2 {
+        border: 1px solid black;
+      }
+      .header,
+      .footer {
+        grid-column: 1/4;
+      }
+
+      .container {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: 10% 1fr 10%;
+        height: 90vh;
+      }
+      .container2 {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: 10% 1fr 10%;
+        height: 90vh;
+        grid-template-areas:
+          "header header header header"
+          "sidebar main main main"
+          "footer footer footer footer";
+      }
+      .header2 {
+        grid-area: header;
+      }
+      .sidebar2 {
+        grid-area: sidebar;
+      }
+      .main2 {
+        grid-area: main;
+      }
+      .footer2 {
+        grid-area: footer;
+      }
+      .container3 div,
+      .container4 div {
+        border: 1px solid black;
+      }
+      .container3 {
+        display: grid;
+        grid-template-columns: 100px 30% 1fr;
+        grid-template-rows: 200px 100px;
+        grid-gap: 15px;
+      }
+      .container4 {
+        height: 500px;
+        display: grid;
+        grid-template-columns: 25% 15% 25%;
+        grid-template-rows: 2fr 3fr 2fr;
+        justify-content: space-between;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <h1>Гриды</h1>
+    <div class="container">
+      <header class="header">HEADER</header>
+      <aside class="sidebar">SIDEBAR</aside>
+      <main class="main">CONTENT</main>
+      <footer class="footer">FOOTER</footer>
+    </div>
+    <div class="container2">
+      <header class="header2">HEADER</header>
+      <aside class="sidebar2">SIDEBAR</aside>
+      <main class="main2">CONTENT</main>
+      <footer class="footer2">FOOTER</footer>
+    </div>
+    <div class="container3">
+      <div>TEXT</div>
+      <div>TEXT</div>
+      <div>TEXT</div>
+      <div>TEXT</div>
+      <div>TEXT</div>
+      <div>TEXT</div>
+    </div>
+    <div class="container4">
+      <div>TEXT</div>
+      <div>TEXT</div>
+      <div>TEXT</div>
+      <div>TEXT</div>
+      <div>TEXT</div>
+      <div>TEXT</div>
+      <div>TEXT</div>
+      <div>TEXT</div>
+      <div>TEXT</div>
+    </div>
+  </body>
 </html>
